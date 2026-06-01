@@ -4,6 +4,6 @@
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Language = ["en"]}
+  to = "https://dreamteampm.com/:splat"
+  status = 301
+  force = true
