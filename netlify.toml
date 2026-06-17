@@ -1,9 +1,3 @@
 [build]
   publish = "."
   command = ""
-
-[[redirects]]
-  from = "/*"
-  to = "https://dreamteampm.com/"
-  status = 301
-  force = true

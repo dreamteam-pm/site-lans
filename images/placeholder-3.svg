@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Apartment building photo placeholder">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2BAEE3"/>
+      <stop offset="1" stop-color="#002433"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#sky3)"/>
+  <circle cx="300" cy="70" r="38" fill="#ffffff" opacity="0.5"/>
+  <rect x="60" y="220" width="150" height="180" fill="#115F7E"/>
+  <rect x="225" y="160" width="160" height="240" fill="#002433"/>
+  <rect x="400" y="210" width="150" height="190" fill="#115F7E"/>
+  <g fill="#ffd98a" opacity="0.9">
+    <rect x="80" y="245" width="26" height="32"/><rect x="124" y="245" width="26" height="32"/><rect x="168" y="245" width="26" height="32"/>
+    <rect x="80" y="300" width="26" height="32"/><rect x="124" y="300" width="26" height="32"/><rect x="168" y="300" width="26" height="32"/>
+    <rect x="245" y="190" width="30" height="36"/><rect x="295" y="190" width="30" height="36"/><rect x="345" y="190" width="30" height="36"/>
+    <rect x="245" y="255" width="30" height="36"/><rect x="295" y="255" width="30" height="36"/><rect x="345" y="255" width="30" height="36"/>
+    <rect x="245" y="320" width="30" height="36"/><rect x="295" y="320" width="30" height="36"/><rect x="345" y="320" width="30" height="36"/>
+    <rect x="420" y="235" width="26" height="32"/><rect x="464" y="235" width="26" height="32"/><rect x="508" y="235" width="26" height="32"/>
+    <rect x="420" y="300" width="26" height="32"/><rect x="464" y="300" width="26" height="32"/><rect x="508" y="300" width="26" height="32"/>
+  </g>
+  <rect x="0" y="384" width="600" height="16" fill="#001016"/>
+</svg>
