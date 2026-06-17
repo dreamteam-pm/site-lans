@@ -185,7 +185,7 @@ a:hover { text-decoration: underline; }
    ==================================================================== */
 
 /* --- Recreated text logo (editable, with corrected tagline) --- */
-.logo { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; text-decoration: none !important; }
+.logo { display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1; text-decoration: none !important; }
 .logo .logo-main { font-family: 'Jost', sans-serif; font-weight: 500; font-size: 40px; letter-spacing: 1px; }
 .logo .lg-dream { color: var(--light); }
 .logo .lg-team { color: #3a3a3a; }
