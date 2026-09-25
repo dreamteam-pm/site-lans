@@ -287,3 +287,4 @@ a:hover { text-decoration: underline; }
   .rentals-hero h1 { font-size: 30px; }
   .listings-frame iframe { height: 1400px; }
 }
+.filter-chips[hidden] { display: none; }
