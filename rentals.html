@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Available Rentals in St. Cloud &amp; Central Minnesota | Dreamteam Property Management</title>
-  <meta name="description" content="Search every apartment and home available from Dreamteam Property Management right now. Filter by bedrooms and area, see photos and rents, and apply online in minutes.">
+  <meta name="description" content="Search every apartment available from Dreamteam Property Management right now. Filter by bedrooms, area, or community, see photos and rents, and apply online in minutes.">
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Urbanist:wght@500;600;700;800&family=Jost:wght@400;500;600&family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -63,7 +63,7 @@
   </header>
   <section class="rentals-hero">
     <h1>Available Rentals</h1>
-    <p>Every home we have open right now, straight from our leasing system. Pick an area and bedroom count, then browse photos, rents, and apply online.</p>
+    <p>Every home we have open or coming available, straight from our leasing system. Pick an area, bedroom count, or community, then browse photos and rents and apply online.</p>
   </section>
   <div class="rentals-wrap">
     <div class="filter-chips" data-group="area">
@@ -73,18 +73,50 @@
     </div>
     <div class="filter-chips" data-group="beds">
       <button class="chip is-on" data-val="">Any Bedrooms</button>
-      <button class="chip" data-val="1">1+ Bedroom</button>
-      <button class="chip" data-val="2">2+ Bedrooms</button>
-      <button class="chip" data-val="3">3+ Bedrooms</button>
+      <button class="chip" data-val="1">1 Bedroom</button>
+      <button class="chip" data-val="2">2 Bedrooms</button>
+      <button class="chip" data-val="3">3 Bedrooms</button>
+      <button class="chip" data-val="4">4+ Bedrooms</button>
     </div>
-    <div class="filter-chips" data-group="type" id="typeChips" hidden>
-      <button class="chip is-on" data-val="">All Property Types</button>
-      <button class="chip" data-val="houses">Single-Family Homes</button>
+    <div class="rentals-controls">
+      <label>Community
+        <select id="communitySelect">
+          <option value="">All communities</option>
+        <option value="forestview">Forestview (St. Cloud)</option>
+        <option value="hampton-place">Hampton Place (St. Cloud)</option>
+        <option value="majestic-view">Majestic View (St. Cloud)</option>
+        <option value="the-heights">The Heights (St. Cloud)</option>
+        <option value="westwood-oaks">Westwood Oaks (St. Cloud)</option>
+        <option value="northwinds">Northwinds (Sauk Rapids)</option>
+        <option value="clear-lake-apartments">Clear Lake Apartments (Clear Lake)</option>
+        <option value="710-penn-apartments">710 Penn Apartments (Foley)</option>
+        <option value="stearns-terrace">Stearns Terrace (St. Cloud)</option>
+        <option value="710-apartments">710 Apartments (St. Cloud)</option>
+        <option value="university-square">University Square (St. Cloud)</option>
+        <option value="1910-1920">1910 & 1920 Apartments (St. Cloud)</option>
+        <option value="1820-apartments">1820 Apartments (St. Cloud)</option>
+        <option value="fairwinds">Fairwinds (St. Cloud)</option>
+        <option value="elkwood">Elkwood (St. Cloud)</option>
+        <option value="lj-east">LJ East (St. Cloud)</option>
+        <option value="riverview">Riverview (St. Cloud)</option>
+        <option value="north-place">North Place (St. Cloud)</option>
+        <option value="beverly">Beverly (Sauk Rapids)</option>
+        <option value="towns-edge-square">Town's Edge Square (Foley)</option>
+        <option value="country-club">Country Club (Melrose)</option>
+        <option value="campus-east">Campus East (St. Cloud)</option>
+        </select>
+      </label>
+      <label>Sort by
+        <select id="sortSelect">
+          <option value="soonest">Available soonest</option>
+          <option value="rent_asc">Rent: low to high</option>
+          <option value="rent_desc">Rent: high to low</option>
+        </select>
+      </label>
     </div>
-    <p class="filter-note">Showing <strong id="resultLabel">all available rentals</strong>. Prefer a bigger view? <a id="openFull" href="https://nationalrealtyguildmgmt.appfolio.com/listings" target="_blank" rel="noopener">Open the full listings page &rarr;</a></p>
-    <div class="listings-frame">
-      <iframe id="listingsFrame" src="https://nationalrealtyguildmgmt.appfolio.com/listings" title="Available rentals from Dreamteam Property Management" loading="eager"></iframe>
-    </div>
+    <p class="filter-note" id="resultLabel">Loading available rentals&hellip;</p>
+    <div class="rentals-grid" id="rentalsGrid"></div>
+    <p class="filter-note">Want more filters like pets or price? <a href="https://nationalrealtyguildmgmt.appfolio.com/listings" target="_blank" rel="noopener">Open the full listings page &rarr;</a></p>
   </div>
   <section class="building-links">
     <h2>Looking for a specific building?</h2>
@@ -134,68 +166,90 @@
       <div class="appfolio"><img src="images/appfolio.png" alt="Powered by AppFolio"></div>
     </div>
   </footer>
+  <script src="js/availability.js"></script>
   <script>
   (function () {
-    var BASE = "https://nationalrealtyguildmgmt.appfolio.com/listings";
-    var SINGLE_FAMILY_LIST_ID = "";   // AppFolio Property List id for single-family homes (set once the list exists)
-    var CENTRAL = ["St. Cloud", "Sauk Rapids", "Sartell", "Waite Park", "St. Joseph", "Foley", "Clear Lake", "Melrose", "Rice", "Cold Spring", "Becker", "Big Lake"];
-    var TWIN = ["Minneapolis", "St. Paul", "Bloomington", "Brooklyn Center", "Brooklyn Park", "Burnsville", "Eagan", "Eden Prairie", "Hopkins", "Woodbury", "Apple Valley", "Richfield", "Edina", "Plymouth", "Maple Grove", "Lakeville", "Coon Rapids", "Blaine", "Roseville", "Maplewood", "Minnetonka", "Savage", "Shakopee", "Inver Grove Heights", "Cottage Grove", "Golden Valley", "St. Louis Park", "Robbinsdale", "Crystal", "New Hope", "Fridley", "Columbia Heights"];
-    // Only cities AppFolio currently lists can be used as filters, so intersect with the live list.
-    var liveCities = ["St. Cloud", "Sauk Rapids", "Clear Lake", "Melrose", "Minneapolis", "Bloomington", "Brooklyn Center", "Brooklyn Park", "Burnsville", "Eagan", "Eden Prairie", "Hopkins", "Woodbury", "Apple Valley"];
-    var state = { area: "all", beds: "", type: "" };
-    var LABEL = { all: "all available rentals", stcloud: "St. Cloud area rentals", twincities: "Twin Cities rentals" };
+    var NAMES = {"forestview": "Forestview", "hampton-place": "Hampton Place", "majestic-view": "Majestic View", "the-heights": "The Heights", "westwood-oaks": "Westwood Oaks", "northwinds": "Northwinds", "clear-lake-apartments": "Clear Lake Apartments", "710-penn-apartments": "710 Penn Apartments", "stearns-terrace": "Stearns Terrace", "710-apartments": "710 Apartments", "university-square": "University Square", "1910-1920": "1910 & 1920 Apartments", "1820-apartments": "1820 Apartments", "fairwinds": "Fairwinds", "elkwood": "Elkwood", "lj-east": "LJ East", "riverview": "Riverview", "north-place": "North Place", "beverly": "Beverly", "towns-edge-square": "Town's Edge Square", "country-club": "Country Club", "campus-east": "Campus East"};
+    var CENTRAL = ["St. Cloud", "Saint Cloud", "Sauk Rapids", "Sartell", "Waite Park", "St. Joseph", "Foley", "Clear Lake", "Melrose", "Rice", "Cold Spring", "Becker", "Big Lake", "Little Falls", "Paynesville"];
+    var state = { area: "all", beds: "", community: "", sort: "soonest" };
     var qs = new URLSearchParams(location.search);
-    if (qs.get("area")) state.area = qs.get("area");
-    if (qs.get("beds")) state.beds = qs.get("beds");
-    if (qs.get("type")) state.type = qs.get("type");
-    if (SINGLE_FAMILY_LIST_ID) document.getElementById("typeChips").hidden = false;
+    ["area", "beds", "community", "sort"].forEach(function (k) { if (qs.get(k)) state[k] = qs.get(k); });
+    var grid = document.getElementById("rentalsGrid");
+    var label = document.getElementById("resultLabel");
+    var commSel = document.getElementById("communitySelect");
+    var sortSel = document.getElementById("sortSelect");
 
-    function cityParams(list) {
-      return list.filter(function (c) { return liveCities.indexOf(c) !== -1; })
-        .map(function (c) { return "filters[cities][]=" + encodeURIComponent(c); });
-    }
-    function buildUrl() {
-      var p = [];
-      if (state.area === "stcloud") p = p.concat(cityParams(CENTRAL));
-      if (state.area === "twincities") p = p.concat(cityParams(TWIN));
-      if (state.beds) p.push("filters[bedrooms]=" + state.beds);
-      if (state.type === "houses" && SINGLE_FAMILY_LIST_ID) p.push("filters[property_list]=" + SINGLE_FAMILY_LIST_ID);
-      return BASE + (p.length ? "?" + p.join("&") : "");
-    }
-    function apply() {
-      var url = buildUrl();
-      document.getElementById("listingsFrame").src = url;
-      document.getElementById("openFull").href = url;
-      var label = LABEL[state.area] || LABEL.all;
-      if (state.beds) label = state.beds + "+ bedroom " + label;
-      if (state.type === "houses") label = "single-family " + label;
-      document.getElementById("resultLabel").textContent = label;
+    function areaOf(l) { return CENTRAL.indexOf(l.city) !== -1 ? "stcloud" : "twincities"; }
+    function rentNum(l) { return parseInt(String(l.rent).replace(/\D/g, "") || 0, 10); }
+
+    function render() {
+      var d = window.DTAvail.data;
+      if (!d) return;
+      var units = (d.listings || []).map(function (l) { l.community_name = l.community ? NAMES[l.community] : ""; return l; });
+      if (state.area !== "all") units = units.filter(function (l) { return areaOf(l) === state.area; });
+      if (state.beds) units = units.filter(function (l) { return state.beds === "4" ? l.beds >= 4 : l.beds === parseInt(state.beds, 10); });
+      if (state.community) units = units.filter(function (l) { return l.community === state.community; });
+      if (state.sort === "rent_asc") units.sort(function (a, b) { return rentNum(a) - rentNum(b); });
+      else if (state.sort === "rent_desc") units.sort(function (a, b) { return rentNum(b) - rentNum(a); });
+      else units = window.DTAvail.sortUnits(units);
+
+      var parts = [];
+      if (state.beds) parts.push(state.beds === "4" ? "4+ bedroom" : state.beds + " bedroom");
+      if (state.community) parts.push(NAMES[state.community]);
+      else if (state.area === "stcloud") parts.push("St. Cloud area");
+      else if (state.area === "twincities") parts.push("Twin Cities");
+      label.innerHTML = "Showing <strong>" + units.length + " " + (units.length === 1 ? "rental" : "rentals") + "</strong>" + (parts.length ? " &middot; " + parts.join(" &middot; ") : "") + ".";
+
+      if (!units.length) {
+        var target = state.community ? '<a href="' + state.community + '.html">' + NAMES[state.community] + " page</a>" : "";
+        grid.innerHTML = '<div class="avail-empty rentals-empty"><strong>Nothing matches those filters right now.</strong> Try a different bedroom count or area, '
+          + (target ? "join the waitlist on the " + target + ", " : "")
+          + 'or call <a href="tel:3203104265">(320) 310-4265</a> and we will help you find the right fit.</div>';
+      } else {
+        grid.innerHTML = units.map(function (l) { return window.DTAvail.unitCard(l, { showCommunity: true }); }).join("");
+      }
+
       document.querySelectorAll(".filter-chips").forEach(function (g) {
         var key = g.getAttribute("data-group");
         g.querySelectorAll(".chip").forEach(function (b) { b.classList.toggle("is-on", b.getAttribute("data-val") === state[key]); });
       });
+      commSel.value = state.community;
+      sortSel.value = state.sort;
       var sp = new URLSearchParams();
       if (state.area !== "all") sp.set("area", state.area);
       if (state.beds) sp.set("beds", state.beds);
-      if (state.type) sp.set("type", state.type);
+      if (state.community) sp.set("community", state.community);
+      if (state.sort !== "soonest") sp.set("sort", state.sort);
       history.replaceState(null, "", location.pathname + (sp.toString() ? "?" + sp : ""));
+
+      // Live counts in the community dropdown and the building grid
+      var counts = d.counts || {};
+      Array.prototype.forEach.call(commSel.options, function (o) {
+        if (!o.value) return;
+        var n = counts[o.value] || 0;
+        o.textContent = o.textContent.replace(/ \u00b7 \d+ open$/, "") + (n ? " \u00b7 " + n + " open" : "");
+      });
+      document.querySelectorAll(".bl-count[data-slug]").forEach(function (el) {
+        var n = counts[el.getAttribute("data-slug")] || 0;
+        if (n) { el.textContent = n + " open"; el.hidden = false; }
+      });
     }
+
     document.querySelectorAll(".filter-chips .chip").forEach(function (b) {
       b.addEventListener("click", function () {
         state[b.closest(".filter-chips").getAttribute("data-group")] = b.getAttribute("data-val");
-        apply();
+        render();
       });
     });
-    apply();
+    commSel.addEventListener("change", function () { state.community = commSel.value; render(); });
+    sortSel.addEventListener("change", function () { state.sort = sortSel.value; render(); });
 
-    // Live unit counts per building + refresh the usable city list from the feed
-    fetch("/.netlify/functions/listings").then(function (r) { return r.json(); }).then(function (d) {
-      if (d.cities && d.cities.length) { liveCities = d.cities; if (state.area !== "all") apply(); }
-      document.querySelectorAll(".bl-count[data-slug]").forEach(function (el) {
-        var n = (d.counts || {})[el.getAttribute("data-slug")] || 0;
-        if (n) { el.textContent = n + " open"; el.hidden = false; }
-      });
-    }).catch(function () {});
+    window.DTAvail.onData = render;
+    window.DTAvail.onFail = function () {
+      label.textContent = "";
+      grid.innerHTML = '<div class="avail-empty rentals-empty">Live listings are loading slowly. <a href="https://nationalrealtyguildmgmt.appfolio.com/listings" target="_blank" rel="noopener">Open the full listings page &rarr;</a> or call <a href="tel:3203104265">(320) 310-4265</a>.</div>';
+    };
+    if (window.DTAvail.data) render();
   })();
   </script>
 </body>

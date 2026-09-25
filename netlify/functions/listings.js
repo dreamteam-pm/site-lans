@@ -70,6 +70,8 @@ function parseListings(html) {
     const rent = text(/js-listing-blurb-rent">\s*([^<]+)</, card);
     const sqft = text(/Square Feet<\/dt>\s*<dd class="detail-box__value">([^<]+)</, card);
     const title = text(/js-listing-title">\s*<a[^>]*>([^<]+)</, card);
+    const availableRaw = text(/js-listing-available">\s*([^<]+)</, card); // "NOW" or "10/1/26"
+    const available = !availableRaw || /now/i.test(availableRaw) ? "now" : availableRaw;
     const photo = (card.match(/data-original="([^"]+)"/) || [])[1] || "";
     const detail = (card.match(/href="(\/listings\/detail\/[^"]+)"/) || [])[1] || "";
     const apply = (card.match(/href="(\/listings\/rental_applications\/new\?[^"]+)"/) || [])[1] || "";
@@ -82,6 +84,7 @@ function parseListings(html) {
       baths: bb ? parseFloat(bb[2]) : null,
       sqft,
       title,
+      available,
       photo,
       detail_url: detail ? "https://nationalrealtyguildmgmt.appfolio.com" + detail : "",
       apply_url: apply ? "https://nationalrealtyguildmgmt.appfolio.com" + apply.replace(/&amp;/g, "&") : "",

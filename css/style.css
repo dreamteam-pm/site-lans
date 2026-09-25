@@ -253,8 +253,6 @@ a:hover { text-decoration: underline; }
 .chip.is-on { background: var(--primary); border-color: var(--primary); color: #fff; }
 .filter-note { text-align: center; font-size: 14px; color: var(--gray-dark); margin-bottom: 14px; }
 .filter-note a { font-weight: 700; }
-.listings-frame { background: var(--white); border-radius: 16px; box-shadow: 0 10px 28px rgba(0,36,51,.12); overflow: hidden; border-top: 5px solid var(--primary); }
-.listings-frame iframe { display: block; width: 100%; height: 1600px; border: 0; }
 .building-links { max-width: 1160px; margin: 0 auto; padding: 0 24px 60px; }
 .building-links h2 { text-align: center; font-size: 28px; color: var(--ink); margin-bottom: 18px; }
 .bl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
@@ -285,6 +283,16 @@ a:hover { text-decoration: underline; }
 .lease-card .btn-ghost { width: 100%; text-align: center; margin-top: 10px; }
 @media (max-width: 768px) {
   .rentals-hero h1 { font-size: 30px; }
-  .listings-frame iframe { height: 1400px; }
 }
 .filter-chips[hidden] { display: none; }
+
+/* Native rentals grid */
+.rentals-controls { display: flex; flex-wrap: wrap; gap: 14px 22px; justify-content: center; margin: 4px 0 16px; }
+.rentals-controls label { font-size: 14px; font-weight: 700; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+.rentals-controls select { font-family: 'Karla', sans-serif; font-size: 15px; padding: 9px 12px; border: 2px solid #dfe6ec; border-radius: 10px; background: var(--white); color: var(--ink); min-width: 220px; }
+.rentals-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; margin: 6px 0 18px; }
+.rentals-empty { grid-column: 1 / -1; text-align: center; }
+.avail-unit .au-photo { position: relative; }
+.avail-unit .au-when { position: absolute; top: 10px; left: 10px; background: var(--light); color: var(--ink); font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+.avail-unit .au-when.is-soon { background: #ffe9b3; color: #5a3d00; }
+.avail-unit .au-comm { font-size: 13.5px; font-weight: 700; color: var(--primary); }
