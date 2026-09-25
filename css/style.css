@@ -235,3 +235,55 @@ a:hover { text-decoration: underline; }
   .logo .logo-main { font-size: 32px; }
   .logo .logo-sub { font-size: 13px; letter-spacing: 4px; }
 }
+
+/* ====================================================================
+   Available rentals search page + live per-building availability
+   ==================================================================== */
+.btn-ghost { background: var(--white); color: var(--primary) !important; border: 2px solid var(--primary); }
+.btn-ghost:hover { background: var(--primary); color: var(--white) !important; text-decoration: none !important; }
+
+/* Search page */
+.rentals-hero { background: var(--gradient); color: #fff; text-align: center; padding: 46px 24px 38px; }
+.rentals-hero h1 { font-size: 40px; margin-bottom: 8px; }
+.rentals-hero p { font-size: 17px; opacity: .95; max-width: 680px; margin: 0 auto; }
+.rentals-wrap { max-width: 1200px; margin: 0 auto; padding: 26px 24px 60px; }
+.filter-chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 18px; }
+.chip { background: var(--white); border: 2px solid #dfe6ec; border-radius: 30px; padding: 10px 20px; font-family: 'Urbanist', sans-serif; font-weight: 700; font-size: 15px; color: var(--ink); cursor: pointer; transition: all .15s; }
+.chip:hover { border-color: var(--primary); color: var(--primary); }
+.chip.is-on { background: var(--primary); border-color: var(--primary); color: #fff; }
+.filter-note { text-align: center; font-size: 14px; color: var(--gray-dark); margin-bottom: 14px; }
+.filter-note a { font-weight: 700; }
+.listings-frame { background: var(--white); border-radius: 16px; box-shadow: 0 10px 28px rgba(0,36,51,.12); overflow: hidden; border-top: 5px solid var(--primary); }
+.listings-frame iframe { display: block; width: 100%; height: 1600px; border: 0; }
+.building-links { max-width: 1160px; margin: 0 auto; padding: 0 24px 60px; }
+.building-links h2 { text-align: center; font-size: 28px; color: var(--ink); margin-bottom: 18px; }
+.bl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.bl-grid a { background: var(--white); border: 1px solid #e3e9ed; border-radius: 12px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; gap: 10px; color: var(--ink); font-weight: 600; transition: all .15s; }
+.bl-grid a:hover { border-color: var(--primary); color: var(--primary); text-decoration: none; transform: translateY(-2px); }
+.bl-grid a .bl-city { font-size: 12.5px; color: var(--gray-dark); font-weight: 500; display: block; }
+.bl-grid a .bl-count { background: var(--light); color: var(--ink); font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
+.bl-grid a .bl-count[hidden] { display: none; }
+
+/* Per-building availability section */
+.avail-intro { font-size: 16px; color: #2c3a40; }
+.avail-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 10px 0 6px; }
+.avail-unit { background: var(--white); border: 1px solid #e3e9ed; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 14px rgba(0,36,51,.06); }
+.avail-unit .au-photo { aspect-ratio: 4 / 3; background: var(--gray); }
+.avail-unit .au-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.avail-unit .au-nophoto { height: 100%; display: flex; align-items: center; justify-content: center; color: var(--gray-dark); font-size: 14px; }
+.avail-unit .au-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.avail-unit .au-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.avail-unit .au-rent { font-family: 'Urbanist', sans-serif; font-size: 22px; font-weight: 800; color: var(--primary); }
+.avail-unit .au-rent small { font-size: 13px; font-weight: 600; color: var(--gray-dark); }
+.avail-unit .au-bb { background: var(--gray); padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 600; }
+.avail-unit .au-title { font-weight: 700; color: var(--ink); font-size: 15px; }
+.avail-unit .au-addr { font-size: 13.5px; color: var(--gray-dark); }
+.avail-unit .au-actions { display: flex; gap: 8px; margin-top: auto; padding-top: 8px; }
+.avail-unit .au-actions .btn { flex: 1; text-align: center; padding: 10px 12px; font-size: 14px; }
+.avail-empty { background: var(--white); border: 1px dashed #cfd8df; border-radius: 12px; padding: 18px 20px; font-size: 15.5px; color: #2c3a40; }
+.avail-loading { color: var(--gray-dark); font-style: italic; }
+.lease-card .btn-ghost { width: 100%; text-align: center; margin-top: 10px; }
+@media (max-width: 768px) {
+  .rentals-hero h1 { font-size: 30px; }
+  .listings-frame iframe { height: 1400px; }
+}

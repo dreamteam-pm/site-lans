@@ -1,0 +1,134 @@
+[
+ {
+  "slug": "forestview",
+  "name": "Forestview",
+  "addr": "16th St. SE, St. Cloud, MN 56304",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "hampton-place",
+  "name": "Hampton Place",
+  "addr": "503 15th Ave. S.E., St. Cloud, MN 56304",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "majestic-view",
+  "name": "Majestic View",
+  "addr": "200 5th Avenue North, St. Cloud, MN 56303",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "the-heights",
+  "name": "The Heights",
+  "addr": "524 14th St. S., St. Cloud, MN 56301",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "westwood-oaks",
+  "name": "Westwood Oaks",
+  "addr": "843 Driftwood Drive, St. Cloud, MN 56301",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "northwinds",
+  "name": "Northwinds",
+  "addr": "1333 13th Street Circle, Sauk Rapids, MN 56379",
+  "city": "Sauk Rapids, MN"
+ },
+ {
+  "slug": "clear-lake-apartments",
+  "name": "Clear Lake Apartments",
+  "addr": "7700&ndash;8708 Brooks Street, Clear Lake, MN 55319",
+  "city": "Clear Lake, MN"
+ },
+ {
+  "slug": "710-penn-apartments",
+  "name": "710 Penn Apartments",
+  "addr": "710 Penn St., Foley, MN 56329",
+  "city": "Foley, MN"
+ },
+ {
+  "slug": "stearns-terrace",
+  "name": "Stearns Terrace",
+  "addr": "520 14th St. S, St. Cloud, MN 56301",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "710-apartments",
+  "name": "710 Apartments",
+  "addr": "710 13th St. S, St. Cloud, MN 56301",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "university-square",
+  "name": "University Square",
+  "addr": "624 13th St. S, St. Cloud, MN 56301",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "1910-1920",
+  "name": "1910 & 1920 Apartments",
+  "addr": "1910-1920 10th Ave. S, St. Cloud, MN 56301",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "1820-apartments",
+  "name": "1820 Apartments",
+  "addr": "1820 10th Ave. S, St. Cloud, MN 56301",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "fairwinds",
+  "name": "Fairwinds",
+  "addr": "2623 Clearwater Road, St. Cloud, MN 56301",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "elkwood",
+  "name": "Elkwood",
+  "addr": "1212 2nd St. NE, St. Cloud, MN 56304",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "lj-east",
+  "name": "LJ East",
+  "addr": "210 5th Ave. NE, St. Cloud, MN 56304",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "riverview",
+  "name": "Riverview",
+  "addr": "525 6th Ave. N, St. Cloud, MN 56303",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "north-place",
+  "name": "North Place",
+  "addr": "3457 3rd St. N, St. Cloud, MN 56303",
+  "city": "St. Cloud, MN"
+ },
+ {
+  "slug": "beverly",
+  "name": "Beverly",
+  "addr": "1131 1st Ave. N, Sauk Rapids, MN 56379",
+  "city": "Sauk Rapids, MN"
+ },
+ {
+  "slug": "towns-edge-square",
+  "name": "Town's Edge Square",
+  "addr": "787 9th Ave. NE, Foley, MN 56329",
+  "city": "Foley, MN"
+ },
+ {
+  "slug": "country-club",
+  "name": "Country Club",
+  "addr": "190 Country Club Road, Melrose, MN 56352",
+  "city": "Melrose, MN"
+ },
+ {
+  "slug": "campus-east",
+  "name": "Campus East",
+  "addr": "1703 University Dr. SE, St. Cloud, MN 56304",
+  "city": "St. Cloud, MN"
+ }
+]

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Rentals in St. Cloud &amp; Central Minnesota | Dreamteam Property Management</title>
+  <meta name="description" content="Search every apartment and home available from Dreamteam Property Management right now. Filter by bedrooms and area, see photos and rents, and apply online in minutes.">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Urbanist:wght@500;600;700;800&family=Jost:wght@400;500;600&family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="header-top">
+      <span class="powered-meta"><img src="images/meta-black.png" alt="Meta Realty"></span>
+      <a href="index.html" class="logo"><span class="logo-main"><span class="lg-dream">DREAM</span><span class="lg-team">TEAM</span></span><span class="logo-sub">PROPERTY MANAGEMENT</span><span class="logo-tag">ST CLOUD &amp; CENTRAL MINNESOTA</span></a>
+      <div class="header-right">
+        <a class="header-phone" href="tel:3203104265">📞 (320) 310-4265</a>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-item"><a href="index.html">Home</a></div>
+        <div class="nav-item">
+          <span>Communities &#9662;</span>
+          <div class="dropdown">
+            <a href="index.html#communities">All Communities</a>
+            <a href="forestview.html">Forestview</a>
+            <a href="hampton-place.html">Hampton Place</a>
+            <a href="majestic-view.html">Majestic View</a>
+            <a href="the-heights.html">The Heights</a>
+            <a href="westwood-oaks.html">Westwood Oaks</a>
+            <a href="northwinds.html">Northwinds</a>
+            <a href="clear-lake-apartments.html">Clear Lake Apartments</a>
+            <a href="710-penn-apartments.html">710 Penn Apartments</a>
+            <a href="stearns-terrace.html">Stearns Terrace</a>
+            <a href="710-apartments.html">710 Apartments</a>
+            <a href="university-square.html">University Square</a>
+            <a href="1910-1920.html">1910 & 1920 Apartments</a>
+            <a href="1820-apartments.html">1820 Apartments</a>
+            <a href="fairwinds.html">Fairwinds</a>
+            <a href="elkwood.html">Elkwood</a>
+            <a href="lj-east.html">LJ East</a>
+            <a href="riverview.html">Riverview</a>
+            <a href="north-place.html">North Place</a>
+            <a href="beverly.html">Beverly</a>
+            <a href="towns-edge-square.html">Town's Edge Square</a>
+            <a href="country-club.html">Country Club</a>
+            <a href="campus-east.html">Campus East</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="rentals.html">Available Rentals</a></div>
+        <div class="nav-item">
+          <span>Tenants &#9662;</span>
+          <div class="dropdown">
+            <a href="https://nationalrealtyguildmgmt.appfolio.com/connect/users/sign_in" target="_blank" rel="noopener">Tenant Portal</a><a href="https://nationalrealtyguildmgmt.appfolio.com/connect/users/sign_in" target="_blank" rel="noopener">Maintenance Request</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="index.html#contact">Contact</a></div>
+        <a href="https://nationalrealtyguildmgmt.appfolio.com/connect/users/sign_in" target="_blank" rel="noopener" class="pay-rent-btn">Pay Rent</a>
+      </div>
+    </nav>
+  </header>
+  <section class="rentals-hero">
+    <h1>Available Rentals</h1>
+    <p>Every home we have open right now, straight from our leasing system. Pick an area and bedroom count, then browse photos, rents, and apply online.</p>
+  </section>
+  <div class="rentals-wrap">
+    <div class="filter-chips" data-group="area">
+      <button class="chip is-on" data-val="all">All Areas</button>
+      <button class="chip" data-val="stcloud">St. Cloud Area</button>
+      <button class="chip" data-val="twincities">Twin Cities</button>
+    </div>
+    <div class="filter-chips" data-group="beds">
+      <button class="chip is-on" data-val="">Any Bedrooms</button>
+      <button class="chip" data-val="1">1+ Bedroom</button>
+      <button class="chip" data-val="2">2+ Bedrooms</button>
+      <button class="chip" data-val="3">3+ Bedrooms</button>
+    </div>
+    <div class="filter-chips" data-group="type" id="typeChips" hidden>
+      <button class="chip is-on" data-val="">All Property Types</button>
+      <button class="chip" data-val="houses">Single-Family Homes</button>
+    </div>
+    <p class="filter-note">Showing <strong id="resultLabel">all available rentals</strong>. Prefer a bigger view? <a id="openFull" href="https://nationalrealtyguildmgmt.appfolio.com/listings" target="_blank" rel="noopener">Open the full listings page &rarr;</a></p>
+    <div class="listings-frame">
+      <iframe id="listingsFrame" src="https://nationalrealtyguildmgmt.appfolio.com/listings" title="Available rentals from Dreamteam Property Management" loading="eager"></iframe>
+    </div>
+  </div>
+  <section class="building-links">
+    <h2>Looking for a specific building?</h2>
+    <div class="bl-grid">
+        <a href="forestview.html#availability"><span>Forestview<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="forestview" hidden></span></a>
+        <a href="hampton-place.html#availability"><span>Hampton Place<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="hampton-place" hidden></span></a>
+        <a href="majestic-view.html#availability"><span>Majestic View<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="majestic-view" hidden></span></a>
+        <a href="the-heights.html#availability"><span>The Heights<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="the-heights" hidden></span></a>
+        <a href="westwood-oaks.html#availability"><span>Westwood Oaks<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="westwood-oaks" hidden></span></a>
+        <a href="northwinds.html#availability"><span>Northwinds<span class="bl-city">Sauk Rapids, MN</span></span><span class="bl-count" data-slug="northwinds" hidden></span></a>
+        <a href="clear-lake-apartments.html#availability"><span>Clear Lake Apartments<span class="bl-city">Clear Lake, MN</span></span><span class="bl-count" data-slug="clear-lake-apartments" hidden></span></a>
+        <a href="710-penn-apartments.html#availability"><span>710 Penn Apartments<span class="bl-city">Foley, MN</span></span><span class="bl-count" data-slug="710-penn-apartments" hidden></span></a>
+        <a href="stearns-terrace.html#availability"><span>Stearns Terrace<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="stearns-terrace" hidden></span></a>
+        <a href="710-apartments.html#availability"><span>710 Apartments<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="710-apartments" hidden></span></a>
+        <a href="university-square.html#availability"><span>University Square<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="university-square" hidden></span></a>
+        <a href="1910-1920.html#availability"><span>1910 & 1920 Apartments<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="1910-1920" hidden></span></a>
+        <a href="1820-apartments.html#availability"><span>1820 Apartments<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="1820-apartments" hidden></span></a>
+        <a href="fairwinds.html#availability"><span>Fairwinds<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="fairwinds" hidden></span></a>
+        <a href="elkwood.html#availability"><span>Elkwood<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="elkwood" hidden></span></a>
+        <a href="lj-east.html#availability"><span>LJ East<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="lj-east" hidden></span></a>
+        <a href="riverview.html#availability"><span>Riverview<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="riverview" hidden></span></a>
+        <a href="north-place.html#availability"><span>North Place<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="north-place" hidden></span></a>
+        <a href="beverly.html#availability"><span>Beverly<span class="bl-city">Sauk Rapids, MN</span></span><span class="bl-count" data-slug="beverly" hidden></span></a>
+        <a href="towns-edge-square.html#availability"><span>Town's Edge Square<span class="bl-city">Foley, MN</span></span><span class="bl-count" data-slug="towns-edge-square" hidden></span></a>
+        <a href="country-club.html#availability"><span>Country Club<span class="bl-city">Melrose, MN</span></span><span class="bl-count" data-slug="country-club" hidden></span></a>
+        <a href="campus-east.html#availability"><span>Campus East<span class="bl-city">St. Cloud, MN</span></span><span class="bl-count" data-slug="campus-east" hidden></span></a>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col footer-logo"><a href="index.html" class="logo logo--light"><span class="logo-main"><span class="lg-dream">DREAM</span><span class="lg-team">TEAM</span></span><span class="logo-sub">PROPERTY MANAGEMENT</span><span class="logo-tag">ST CLOUD &amp; CENTRAL MINNESOTA</span></a></div>
+      <div class="footer-col">
+        <h3>Leasing Office</h3>
+        <p>St. Cloud, MN</p><br>
+        <a href="tel:3203104265"><span class="icon">&#9742;</span> (320) 310-4265</a>
+        <a href="mailto:josh@mndreamteam.com"><span class="icon">&#9993;</span> josh@mndreamteam.com</a>
+      </div>
+      <div class="footer-col">
+        <h3>Resident Tools</h3>
+        <p><a href="https://nationalrealtyguildmgmt.appfolio.com/connect/users/sign_in" target="_blank" rel="noopener"><strong>Tenant Portal Login</strong></a></p>
+        <p><a href="https://nationalrealtyguildmgmt.appfolio.com/connect/users/sign_in" target="_blank" rel="noopener"><strong>Submit Maintenance Request</strong></a></p>
+        <p><a href="https://yourmnrentals.com" target="_blank" rel="noopener"><strong>Apply Now</strong></a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2025 All Rights Reserved.<br>Dreamteam Property Management</div>
+      <div class="appfolio"><img src="images/appfolio.png" alt="Powered by AppFolio"></div>
+    </div>
+  </footer>
+  <script>
+  (function () {
+    var BASE = "https://nationalrealtyguildmgmt.appfolio.com/listings";
+    var SINGLE_FAMILY_LIST_ID = "";   // AppFolio Property List id for single-family homes (set once the list exists)
+    var CENTRAL = ["St. Cloud", "Sauk Rapids", "Sartell", "Waite Park", "St. Joseph", "Foley", "Clear Lake", "Melrose", "Rice", "Cold Spring", "Becker", "Big Lake"];
+    var TWIN = ["Minneapolis", "St. Paul", "Bloomington", "Brooklyn Center", "Brooklyn Park", "Burnsville", "Eagan", "Eden Prairie", "Hopkins", "Woodbury", "Apple Valley", "Richfield", "Edina", "Plymouth", "Maple Grove", "Lakeville", "Coon Rapids", "Blaine", "Roseville", "Maplewood", "Minnetonka", "Savage", "Shakopee", "Inver Grove Heights", "Cottage Grove", "Golden Valley", "St. Louis Park", "Robbinsdale", "Crystal", "New Hope", "Fridley", "Columbia Heights"];
+    // Only cities AppFolio currently lists can be used as filters, so intersect with the live list.
+    var liveCities = ["St. Cloud", "Sauk Rapids", "Clear Lake", "Melrose", "Minneapolis", "Bloomington", "Brooklyn Center", "Brooklyn Park", "Burnsville", "Eagan", "Eden Prairie", "Hopkins", "Woodbury", "Apple Valley"];
+    var state = { area: "all", beds: "", type: "" };
+    var LABEL = { all: "all available rentals", stcloud: "St. Cloud area rentals", twincities: "Twin Cities rentals" };
+    var qs = new URLSearchParams(location.search);
+    if (qs.get("area")) state.area = qs.get("area");
+    if (qs.get("beds")) state.beds = qs.get("beds");
+    if (qs.get("type")) state.type = qs.get("type");
+    if (SINGLE_FAMILY_LIST_ID) document.getElementById("typeChips").hidden = false;
+
+    function cityParams(list) {
+      return list.filter(function (c) { return liveCities.indexOf(c) !== -1; })
+        .map(function (c) { return "filters[cities][]=" + encodeURIComponent(c); });
+    }
+    function buildUrl() {
+      var p = [];
+      if (state.area === "stcloud") p = p.concat(cityParams(CENTRAL));
+      if (state.area === "twincities") p = p.concat(cityParams(TWIN));
+      if (state.beds) p.push("filters[bedrooms]=" + state.beds);
+      if (state.type === "houses" && SINGLE_FAMILY_LIST_ID) p.push("filters[property_list]=" + SINGLE_FAMILY_LIST_ID);
+      return BASE + (p.length ? "?" + p.join("&") : "");
+    }
+    function apply() {
+      var url = buildUrl();
+      document.getElementById("listingsFrame").src = url;
+      document.getElementById("openFull").href = url;
+      var label = LABEL[state.area] || LABEL.all;
+      if (state.beds) label = state.beds + "+ bedroom " + label;
+      if (state.type === "houses") label = "single-family " + label;
+      document.getElementById("resultLabel").textContent = label;
+      document.querySelectorAll(".filter-chips").forEach(function (g) {
+        var key = g.getAttribute("data-group");
+        g.querySelectorAll(".chip").forEach(function (b) { b.classList.toggle("is-on", b.getAttribute("data-val") === state[key]); });
+      });
+      var sp = new URLSearchParams();
+      if (state.area !== "all") sp.set("area", state.area);
+      if (state.beds) sp.set("beds", state.beds);
+      if (state.type) sp.set("type", state.type);
+      history.replaceState(null, "", location.pathname + (sp.toString() ? "?" + sp : ""));
+    }
+    document.querySelectorAll(".filter-chips .chip").forEach(function (b) {
+      b.addEventListener("click", function () {
+        state[b.closest(".filter-chips").getAttribute("data-group")] = b.getAttribute("data-val");
+        apply();
+      });
+    });
+    apply();
+
+    // Live unit counts per building + refresh the usable city list from the feed
+    fetch("/.netlify/functions/listings").then(function (r) { return r.json(); }).then(function (d) {
+      if (d.cities && d.cities.length) { liveCities = d.cities; if (state.area !== "all") apply(); }
+      document.querySelectorAll(".bl-count[data-slug]").forEach(function (el) {
+        var n = (d.counts || {})[el.getAttribute("data-slug")] || 0;
+        if (n) { el.textContent = n + " open"; el.hidden = false; }
+      });
+    }).catch(function () {});
+  })();
+  </script>
+</body>
+</html>

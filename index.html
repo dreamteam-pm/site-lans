@@ -49,7 +49,7 @@
             <a href="campus-east.html">Campus East</a>
           </div>
         </div>
-        <div class="nav-item"><a href="https://yourmnrentals.com" target="_blank" rel="noopener">Apply Now / Vacancies</a></div>
+        <div class="nav-item"><a href="rentals.html">Available Rentals</a></div>
         <div class="nav-item">
           <span>Tenants &#9662;</span>
           <div class="dropdown">
@@ -68,7 +68,7 @@
       <h1>St. Cloud Property Management, Perfected.</h1>
       <p class="lede">Servicing the Greater Central Minnesota Area</p>
       <div class="hero-cta">
-        <a href="#communities" class="btn btn-primary">View Available Rentals</a>
+        <a href="rentals.html" class="btn btn-primary">View Available Rentals</a>
         <a href="https://yourmnrentals.com" target="_blank" rel="noopener" class="btn btn-outline">Apply Now</a>
       </div>
     </div>
@@ -117,8 +117,8 @@
       <p>22 apartment communities across Central Minnesota. Click any community for photos, floor plans, and how to apply.</p>
     </div>
     <div class="community-grid">
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/manual/forestview-main.jpg" alt="Forestview apartments"><span class="cc-tag">Now Leasing</span></div>
+      <article class="community-card" data-slug="forestview">
+        <div class="cc-photo"><img src="images/manual/forestview-main.jpg" alt="Forestview apartments"><span class="cc-tag js-cc-avail">Now Leasing</span></div>
         <div class="cc-body">
           <h3>Forestview</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -126,8 +126,8 @@
           <a href="forestview.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/appfolio/hampton-place-1.jpg" alt="Hampton Place apartments"><span class="cc-tag">Now Leasing</span></div>
+      <article class="community-card" data-slug="hampton-place">
+        <div class="cc-photo"><img src="images/appfolio/hampton-place-1.jpg" alt="Hampton Place apartments"><span class="cc-tag js-cc-avail">Now Leasing</span></div>
         <div class="cc-body">
           <h3>Hampton Place</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -135,8 +135,8 @@
           <a href="hampton-place.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/appfolio/majestic-view-1.jpg" alt="Majestic View apartments"><span class="cc-tag">Now Leasing</span></div>
+      <article class="community-card" data-slug="majestic-view">
+        <div class="cc-photo"><img src="images/appfolio/majestic-view-1.jpg" alt="Majestic View apartments"><span class="cc-tag js-cc-avail">Now Leasing</span></div>
         <div class="cc-body">
           <h3>Majestic View</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -144,8 +144,8 @@
           <a href="majestic-view.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/manual/the-heights-main.jpg" alt="The Heights apartments"><span class="cc-tag">Now Leasing</span></div>
+      <article class="community-card" data-slug="the-heights">
+        <div class="cc-photo"><img src="images/manual/the-heights-main.jpg" alt="The Heights apartments"><span class="cc-tag js-cc-avail">Now Leasing</span></div>
         <div class="cc-body">
           <h3>The Heights</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -153,8 +153,8 @@
           <a href="the-heights.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/westwood-oaks/westwood-oaks-01.jpg" alt="Westwood Oaks apartments"><span class="cc-tag">Now Leasing</span></div>
+      <article class="community-card" data-slug="westwood-oaks">
+        <div class="cc-photo"><img src="images/communities/westwood-oaks/westwood-oaks-01.jpg" alt="Westwood Oaks apartments"><span class="cc-tag js-cc-avail">Now Leasing</span></div>
         <div class="cc-body">
           <h3>Westwood Oaks</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -162,8 +162,8 @@
           <a href="westwood-oaks.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/manual/northwinds-1.jpg" alt="Northwinds apartments"></div>
+      <article class="community-card" data-slug="northwinds">
+        <div class="cc-photo"><img src="images/manual/northwinds-1.jpg" alt="Northwinds apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>Northwinds</h3>
           <p class="cc-loc">📍 Sauk Rapids, MN</p>
@@ -171,8 +171,8 @@
           <a href="northwinds.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/manual/clear-lake-1.jpg" alt="Clear Lake Apartments apartments"></div>
+      <article class="community-card" data-slug="clear-lake-apartments">
+        <div class="cc-photo"><img src="images/manual/clear-lake-1.jpg" alt="Clear Lake Apartments apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>Clear Lake Apartments</h3>
           <p class="cc-loc">📍 Clear Lake, MN</p>
@@ -180,8 +180,8 @@
           <a href="clear-lake-apartments.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/manual/penn-710-1.jpg" alt="710 Penn Apartments apartments"></div>
+      <article class="community-card" data-slug="710-penn-apartments">
+        <div class="cc-photo"><img src="images/manual/penn-710-1.jpg" alt="710 Penn Apartments apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>710 Penn Apartments</h3>
           <p class="cc-loc">📍 Foley, MN</p>
@@ -189,8 +189,8 @@
           <a href="710-penn-apartments.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/stearns-terrace/stearns-terrace-01.jpg" alt="Stearns Terrace apartments"></div>
+      <article class="community-card" data-slug="stearns-terrace">
+        <div class="cc-photo"><img src="images/communities/stearns-terrace/stearns-terrace-01.jpg" alt="Stearns Terrace apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>Stearns Terrace</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -198,8 +198,8 @@
           <a href="stearns-terrace.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/710-apartments/710-apartments-01.jpg" alt="710 Apartments apartments"></div>
+      <article class="community-card" data-slug="710-apartments">
+        <div class="cc-photo"><img src="images/communities/710-apartments/710-apartments-01.jpg" alt="710 Apartments apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>710 Apartments</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -207,8 +207,8 @@
           <a href="710-apartments.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/university-square/university-square-01.jpg" alt="University Square apartments"></div>
+      <article class="community-card" data-slug="university-square">
+        <div class="cc-photo"><img src="images/communities/university-square/university-square-01.jpg" alt="University Square apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>University Square</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -216,8 +216,8 @@
           <a href="university-square.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/1910-1920/1910-1920-01.jpg" alt="1910 & 1920 Apartments apartments"></div>
+      <article class="community-card" data-slug="1910-1920">
+        <div class="cc-photo"><img src="images/communities/1910-1920/1910-1920-01.jpg" alt="1910 & 1920 Apartments apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>1910 & 1920 Apartments</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -225,8 +225,8 @@
           <a href="1910-1920.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/1820-apartments/1820-apartments-01.jpg" alt="1820 Apartments apartments"></div>
+      <article class="community-card" data-slug="1820-apartments">
+        <div class="cc-photo"><img src="images/communities/1820-apartments/1820-apartments-01.jpg" alt="1820 Apartments apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>1820 Apartments</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -234,8 +234,8 @@
           <a href="1820-apartments.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/fairwinds/fairwinds-01.jpg" alt="Fairwinds apartments"></div>
+      <article class="community-card" data-slug="fairwinds">
+        <div class="cc-photo"><img src="images/communities/fairwinds/fairwinds-01.jpg" alt="Fairwinds apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>Fairwinds</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -243,8 +243,8 @@
           <a href="fairwinds.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/elkwood/elkwood-01.jpg" alt="Elkwood apartments"></div>
+      <article class="community-card" data-slug="elkwood">
+        <div class="cc-photo"><img src="images/communities/elkwood/elkwood-01.jpg" alt="Elkwood apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>Elkwood</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -252,8 +252,8 @@
           <a href="elkwood.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/lj-east/lj-east-01.jpg" alt="LJ East apartments"></div>
+      <article class="community-card" data-slug="lj-east">
+        <div class="cc-photo"><img src="images/communities/lj-east/lj-east-01.jpg" alt="LJ East apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>LJ East</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -261,8 +261,8 @@
           <a href="lj-east.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/riverview/riverview-01.jpg" alt="Riverview apartments"></div>
+      <article class="community-card" data-slug="riverview">
+        <div class="cc-photo"><img src="images/communities/riverview/riverview-01.jpg" alt="Riverview apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>Riverview</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -270,8 +270,8 @@
           <a href="riverview.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/north-place/north-place-01.jpg" alt="North Place apartments"></div>
+      <article class="community-card" data-slug="north-place">
+        <div class="cc-photo"><img src="images/communities/north-place/north-place-01.jpg" alt="North Place apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>North Place</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -279,8 +279,8 @@
           <a href="north-place.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/beverly/beverly-01.jpg" alt="Beverly apartments"></div>
+      <article class="community-card" data-slug="beverly">
+        <div class="cc-photo"><img src="images/communities/beverly/beverly-01.jpg" alt="Beverly apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>Beverly</h3>
           <p class="cc-loc">📍 Sauk Rapids, MN</p>
@@ -288,8 +288,8 @@
           <a href="beverly.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/towns-edge-square/towns-edge-square-01.jpg" alt="Town's Edge Square apartments"></div>
+      <article class="community-card" data-slug="towns-edge-square">
+        <div class="cc-photo"><img src="images/communities/towns-edge-square/towns-edge-square-01.jpg" alt="Town's Edge Square apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>Town's Edge Square</h3>
           <p class="cc-loc">📍 Foley, MN</p>
@@ -297,8 +297,8 @@
           <a href="towns-edge-square.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/country-club/country-club-01.jpg" alt="Country Club apartments"></div>
+      <article class="community-card" data-slug="country-club">
+        <div class="cc-photo"><img src="images/communities/country-club/country-club-01.jpg" alt="Country Club apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>Country Club</h3>
           <p class="cc-loc">📍 Melrose, MN</p>
@@ -306,8 +306,8 @@
           <a href="country-club.html" class="cc-link">View Community &rarr;</a>
         </div>
       </article>
-      <article class="community-card">
-        <div class="cc-photo"><img src="images/communities/campus-east/campus-east-01.jpg" alt="Campus East apartments"></div>
+      <article class="community-card" data-slug="campus-east">
+        <div class="cc-photo"><img src="images/communities/campus-east/campus-east-01.jpg" alt="Campus East apartments"><span class="cc-tag js-cc-avail" hidden>Now Leasing</span></div>
         <div class="cc-body">
           <h3>Campus East</h3>
           <p class="cc-loc">📍 St. Cloud, MN</p>
@@ -337,7 +337,7 @@
   <section class="cta-band" id="contact">
     <h2>Ready to find your home?</h2>
     <p>Browse available rentals or reach our St. Cloud leasing office at (320) 310-4265.</p>
-    <a href="#communities" class="btn">View Available Rentals</a>
+    <a href="rentals.html" class="btn">View Available Rentals</a>
   </section>
   <footer class="site-footer">
     <div class="footer-content">
@@ -360,5 +360,6 @@
       <div class="appfolio"><img src="images/appfolio.png" alt="Powered by AppFolio"></div>
     </div>
   </footer>
+  <script src="js/availability.js" defer></script>
 </body>
 </html>
